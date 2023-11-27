@@ -4,11 +4,13 @@ import "./App.css";
 import theme from "./config/theme/theme";
 import SideNav from "./components/SideNav";
 import AppHeader from "./components/AppHeader";
+import {ProSidebarProvider} from 'react-pro-sidebar'
 
 function App() {
   return (
     <>
       <ThemeProvider theme={theme}>
+        <ProSidebarProvider>
         <CssBaseline />
         <AppHeader />
           <Box sx={styles.container}>
@@ -22,6 +24,8 @@ function App() {
               </Box>
 
           </Box>
+        </ProSidebarProvider>
+        
       </ThemeProvider>
     </>
   );
@@ -30,11 +34,11 @@ function App() {
 const styles = {
   container: {
     display: "flex",
-    bgcolor: "red",
+    bgcolor: "white",
     height: "calc(100% - 64px)",
   },
   mainSection: {
- p:1,
+ p:4,
  width:'100%',
  height: '100%',
  overflow: 'auto'
